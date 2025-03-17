@@ -24,13 +24,14 @@ router.get('/new', async (req, res) => {
 // POST /users/:userId/musicCDs
 router.post('/', async (req, res) => {
     try {
+        
         const currentUser = await User.findById(req.session.user._id);
         currentUser.myCDs.push(req.body);
         await currentUser.save();
         res.redirect(`/users/${currentUser._id}/musicCDs`);
     } catch (error) {
         console.log(error);
-        res.redirect('/');
+        res.send('Please go back and fill out empty fields!')
     }
 });
 
