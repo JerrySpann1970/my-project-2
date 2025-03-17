@@ -9,7 +9,7 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New CD</h1>
 
-    <form action="" method="">
+    <form action="/users/<%= user._id %>/musicCDs" method="POST">
         <label for="artist">Artist:</label>
         <input type="text" name="artist" id="artist" /> 
         
