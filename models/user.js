@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const cdMediaSchema = new mongoode.Schema({
+const cdMediaSchema = new mongoose.Schema({
   artist: {
     type: String,
     required: true,
