@@ -11,6 +11,15 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Your Tiltes</h1>
     <a href="/users/<%=user._id%>/musicCDs/new">Add A CD</a>
+    <ul>
+        <% myCDs.forEach((myCD)=>{ %>
+        <li>
+            <a href="/users/<%= user._id %>/musicCDs/<%= myCD._id %>">
+            <%= myCD.artist %> - <%= myCD.album %>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
 </body>
 
 </html>
