@@ -65,8 +65,8 @@ router.delete('/:myCDId', async (req, res) => {
 router.get('/:myCDId/edit', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
-        const myCD = currentUser.myCDs.id(req.params.applicationId);
-        res.render('applications/edit.ejs', {
+        const myCD = currentUser.myCDs.id(req.params.myCDId);
+        res.render('musicCDs/edit.ejs', {
             myCD: myCD,
         });
     } catch (error) {
@@ -75,7 +75,20 @@ router.get('/:myCDId/edit', async (req, res) => {
     }
 });
 
-// 
-
+// PUT /users/:userId/musicCDs/:myCDs
+router.put('/:myCDId', async (req, res) => {
+    try {
+        const currentUser = await User.findById(req.session.user._id);
+        const myCD = currentUser.myCDs.id(req.params.myCDId);
+        myCD.set(req.body);
+        await currentUser.save();
+        res.redirect(
+            `/users/${currentUser._id}/musicCDs/${req.params.myCDId}`
+        );
+    } catch (error) {
+        console.log(error);
+        res.redirect('/');
+    }
+});
 
 module.exports = router;
