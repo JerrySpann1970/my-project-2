@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        <%= myCD.album %>
+    </title>
+</head>
+
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+
+    <h1>
+        <%= myCD.artist %> - <%= myCD.album %>
+    </h1>
+
+    <p>Top Tracks</p>
+
+    <ul>
+        <li><%= myCD.trackListingA %></li>
+        <li><%= myCD.trackListingB %></li>
+        <li><%= myCD.trackListingC %></li>
+        <li><%= myCD.trackListingD %></li>
+    </ul>
+
+    <% if (myCD.albumArtLink) { %>
+        <img src="<%= myCD.albumArtLink %>" />   
+    <% } %>
+
+    <% if (myCD.condition) { %>
+        <p>Condition: <%= myCD.condition %> </p>
+    <% } %>
+    
+    <p>Packaging Style: <%= myCD.packageType %></p>
+
+    <form
+      action="/users/<%= user._id %>/musicCDs/<%= myCD._id %>?_method=DELETE"
+      method="POST"
+    >
+      <button type="submit">Remove From Catalog</button>
+    </form>
+</body>
+
+</html>
