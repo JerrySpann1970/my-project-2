@@ -33,7 +33,7 @@ const cdMediaSchema = new mongoose.Schema({
   },
   packageType: {
     type: String,
-    enum: ['jewelcase', 'digipack', 'cardboard sleeve'],
+    enum: ['jewelcase', 'digipack', 'cardboardSleeve'],
     required: true
   }   
 });
