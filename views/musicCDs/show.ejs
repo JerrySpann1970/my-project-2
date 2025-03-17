@@ -35,11 +35,15 @@
     
     <p>Packaging Style: <%= myCD.packageType %></p>
 
+    <a href="/users/<%= user._id %>/musicCDs/<%= myCD._id %>/edit">
+        Edit this Entry
+    </a>
+
     <form
       action="/users/<%= user._id %>/musicCDs/<%= myCD._id %>?_method=DELETE"
       method="POST"
     >
-      <button type="submit">Remove From Catalog</button>
+    <button type="submit">Remove From Catalog</button>
     </form>
 </body>
 
