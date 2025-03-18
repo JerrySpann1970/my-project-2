@@ -4,16 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
   <title>My CD Tracking</title>
 </head>
 
-<body>
-  <%- include('./partials/_navbar.ejs') %>
-  <h1>CD Media Database</h1>
-  <p>Software for cataloging your CD library.</p>
-  <a href="/auth/sign-up">Sign up</a>
-  <a href="/auth/sign-in">Sign in</a>
-</body>
+<body role="img" aria-label="image of headphones on CD against a pinkish musical background" class="index-body">
+  <div class="index-container">
+    <div class="text-container">
+      <h1 class="main-header">CD Media Database</h1>
+      <p class="subheader">Software for cataloging your CD library.</p>
+      <div class="auth-links">
+        <a class="signup-link" href="/auth/sign-up">Sign up</a>
+      </div>
+      <div class="auth-links">
+        <a class="signin-link" href="/auth/sign-in">Sign in</a>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

@@ -1,0 +1,81 @@
+/* imported fonts Fredoka */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wdth,wght@100.1,300..700&display=swap');
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #c3c1c9;
+}
+
+.index-body {
+    background-image: url('https://wallpapercave.com/wp/wp4346484.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.index-container {
+    display: block;
+    justify-content: center;
+}
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 6.8em;
+    color: rgb(19, 116, 207);
+    text-shadow: 3px 3px 5px rgb(33, 33, 36);
+}
+
+.subheader {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    font-size: 3.2em;
+    color: #9262d1;
+    text-shadow: 3px 3px 4px rgb(32, 33, 34);
+}
+
+.auth-links {
+    display: flex;
+    justify-content: center;
+}
+
+.signup-link,
+.signin-link {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 20px 0;
+    border-radius: 25px;
+    width: 10em;
+    text-align: center;
+    box-shadow: 4px 4px 3px black;
+}
+
+.signup-link {
+    background-color: #a142b4;
+    color: whitesmoke;
+    margin: 40px 0 20px 0;
+}
+
+.signup-link:hover {
+    background-color: #3f0f3f;
+}
+
+.signin-link {
+    background-color: #d81285;
+    color: whitesmoke;
+    margin: 20px 0 0 0;
+}
+
+.signin-link:hover {
+    background-color: #470303;
+}
