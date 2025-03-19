@@ -6,43 +6,44 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Add New CD</title>
 </head>
-<body>
+<body role="img" aria-label="image of headphones on CD against a pinkish musical background" class="new-body">
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New CD</h1>
+    <div class="new-body">
+        <form action="/users/<%= user._id %>/musicCDs" method="POST">
+            <label for="artist">Artist:</label>
+            <input type="text" name="artist" id="artist" /> 
+            
+            <label for="album">Album:</label>
+            <input type="text" name="album" id="album" />
 
-    <form action="/users/<%= user._id %>/musicCDs" method="POST">
-        <label for="artist">Artist:</label>
-        <input type="text" name="artist" id="artist" /> 
-        
-        <label for="album">Album:</label>
-        <input type="text" name="album" id="album" />
+            <label for="trackListingA">Favorite Track 1:</label>
+            <input type="text" name="trackListingA" id="trackListingA" />
 
-        <label for="trackListingA">Favorite Track 1:</label>
-        <input type="text" name="trackListingA" id="trackListingA" />
+            <label for="trackListingB">Favorite Track 2:</label>
+            <input type="text" name="trackListingB" id="trackListingB" />
 
-        <label for="trackListingB">Favorite Track 2:</label>
-        <input type="text" name="trackListingB" id="trackListingB" />
+            <label for="trackListingC">Favorite Track 3:</label>
+            <input type="text" name="trackListingC" id="trackListingC" />
 
-        <label for="trackListingC">Favorite Track 3:</label>
-        <input type="text" name="trackListingC" id="trackListingC" />
+            <label for="trackListingD">Favorite Track 4:</label>
+            <input type="text" name="trackListingD" id="trackListingD" />
 
-        <label for="trackListingD">Favorite Track 4:</label>
-        <input type="text" name="trackListingD" id="trackListingD" />
+            <label for="albumArtLink">Album Art Link:</label>
+            <input type="text" name="albumArtLink" id="albumArtLink" />
 
-        <label for="albumArtLink">Album Art Link:</label>
-        <input type="text" name="albumArtLink" id="albumArtLink" />
+            <label for="condition">Condition:</label>
+            <input type="text" name="condition" id="condition" />
 
-        <label for="condition">Condition:</label>
-        <input type="text" name="condition" id="condition" />
+            <label for="packageType">Packaging Style:</label>
+            <select id="packageType" name="packageType">
+            <option value="jewelcase">Jewel Case</option>
+            <option value="digipack">Digipack</option>
+            <option value="cardboardSleeve">Cardboard Sleeve</option>
+            </select>
 
-        <label for="packageType">Packaging Style:</label>
-        <select id="packageType" name="packageType">
-          <option value="jewelcase">Jewel Case</option>
-          <option value="digipack">Digipack</option>
-          <option value="cardboardSleeve">Cardboard Sleeve</option>
-        </select>
-
-        <button type="submit">Add Disc</button>
-    </form>
+            <button type="submit">Add Disc</button>
+        </form>
+    </div>
 </body>
 </html>

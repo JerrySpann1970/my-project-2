@@ -9,100 +9,101 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Edit <%= myCD.artist %> - <%= myCD.album %></h1>
-
-    <form 
-    action="/users/<%= user._id %>/musicCDs/<%= myCD._id %>?_method=PUT" 
-    method="POST"
-    >
-        <label for="artist">Artist:</label>
-        <input 
-            type="text" 
-            name="artist" 
-            id="artist"
-            value="<%= myCD.artist %>" 
-        > 
-        
-        <label for="album">Album:</label>
-        <input 
-            type="text" 
-            name="album" 
-            id="album" 
-            value="<%= myCD.album %>"
+    <div class="edit-body">
+        <form 
+        action="/users/<%= user._id %>/musicCDs/<%= myCD._id %>?_method=PUT" 
+        method="POST"
         >
-
-        <label for="trackListingA">Favorite Track 1:</label>
-        <input 
-            type="text" 
-            name="trackListingA" 
-            id="trackListingA" 
-            value="<%= myCD.trackListingA %>"
-        >
-
-        <label for="trackListingB">Favorite Track 2:</label>
-        <input 
-            type="text" 
-            name="trackListingB" 
-            id="trackListingB"
-            value="<%= myCD.trackListingB %>"
-        >
-
-        <label for="trackListingC">Favorite Track 3:</label>
-        <input 
-            type="text" 
-            name="trackListingC" 
-            id="trackListingC" 
-            value="<%= myCD.trackListingC %>"
-        >
-
-        <label for="trackListingD">Favorite Track 4:</label>
-        <input 
-            type="text" 
-            name="trackListingD" 
-            id="trackListingD"
-            value="<%= myCD.trackListingD %>"
-        >
-
-        <label for="albumArtLink">Album Art Link:</label>
-        <input 
-            type="text" 
-            name="albumArtLink" 
-            id="albumArtLink"
-            value="<%= myCD.albumArtLink %>" 
-        >
-
-        <label for="condition">Condition:</label>
-        <input 
-            type="text" 
-            name="condition" 
-            id="condition"
-            value="<%= myCD.condition %>" 
-        >
-
-        <label for="packageType">Packaging Style:</label>
-        <select id="packageType" name="packageType">
-            <option 
-                value="jewelcase"
-                <%= myCD.packageType === "jewelcase" ? "selected" : "" %>
+            <label for="artist">Artist:</label>
+            <input 
+                type="text" 
+                name="artist" 
+                id="artist"
+                value="<%= myCD.artist %>" 
+            > 
+            
+            <label for="album">Album:</label>
+            <input 
+                type="text" 
+                name="album" 
+                id="album" 
+                value="<%= myCD.album %>"
             >
-                Jewel Case
-            </option>
 
-            <option 
-                value="digipack"
-                <%= myCD.packageType === "digipack" ? "selected" : "" %>
+            <label for="trackListingA">Favorite Track 1:</label>
+            <input 
+                type="text" 
+                name="trackListingA" 
+                id="trackListingA" 
+                value="<%= myCD.trackListingA %>"
             >
-                Digipack
-            </option>
 
-            <option 
-                value="cardboardSleeve"
-                <%= myCD.packageType === "cardboardSleeve" ? "selected" : "" %>
+            <label for="trackListingB">Favorite Track 2:</label>
+            <input 
+                type="text" 
+                name="trackListingB" 
+                id="trackListingB"
+                value="<%= myCD.trackListingB %>"
             >
-                Cardboard Sleeve
-            </option>
-        </select>
 
-        <button type="submit">Update Disc</button>
-    </form>
+            <label for="trackListingC">Favorite Track 3:</label>
+            <input 
+                type="text" 
+                name="trackListingC" 
+                id="trackListingC" 
+                value="<%= myCD.trackListingC %>"
+            >
+
+            <label for="trackListingD">Favorite Track 4:</label>
+            <input 
+                type="text" 
+                name="trackListingD" 
+                id="trackListingD"
+                value="<%= myCD.trackListingD %>"
+            >
+
+            <label for="albumArtLink">Album Art Link:</label>
+            <input 
+                type="text" 
+                name="albumArtLink" 
+                id="albumArtLink"
+                value="<%= myCD.albumArtLink %>" 
+            >
+
+            <label for="condition">Condition:</label>
+            <input 
+                type="text" 
+                name="condition" 
+                id="condition"
+                value="<%= myCD.condition %>" 
+            >
+
+            <label for="packageType">Packaging Style:</label>
+            <select id="packageType" name="packageType">
+                <option 
+                    value="jewelcase"
+                    <%= myCD.packageType === "jewelcase" ? "selected" : "" %>
+                >
+                    Jewel Case
+                </option>
+
+                <option 
+                    value="digipack"
+                    <%= myCD.packageType === "digipack" ? "selected" : "" %>
+                >
+                    Digipack
+                </option>
+
+                <option 
+                    value="cardboardSleeve"
+                    <%= myCD.packageType === "cardboardSleeve" ? "selected" : "" %>
+                >
+                    Cardboard Sleeve
+                </option>
+            </select>
+
+            <button type="submit">Update Disc</button>
+        </form>
+    </div>
 </body>
 </html>

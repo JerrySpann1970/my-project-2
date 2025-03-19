@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(37, 35, 35);
+    background-color: rgb(35, 35, 35);
     font-size: 20px;
 }
 
@@ -87,32 +87,32 @@ body {
 
 button {
     padding: 8px 10px;
-    background-color: #ce4866;
+    background-color: #e6103e;
     color: white;
     border-radius: 30px;
     border: none;
     font-size: 1.1em;
-    width: 10em;
-    margin: 5px;
+    width: 16em;
+    margin: 15px;
 }
 
 button:hover {
-    background-color: #e84a6c;
+    background-color: #e6869b;
 }
 
 .show-actions>a {
-    background-color: #1844e2;
+    background-color: #103bd4;
     color: white;
     text-decoration: none;
     font-size: 1.1em;
     padding: 8px 10px;
     border-radius: 30px;
-    width: 10em;
+    width: 15em;
     text-align: center;
     margin: 5px;
     font-family: 'Fredoka', sans-serif;
 }
 
 .show-actions>a:hover {
-    background-color: #1c2e5b;
+    background-color: #7b96db;
 }

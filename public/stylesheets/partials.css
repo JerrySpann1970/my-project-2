@@ -16,10 +16,10 @@
 .authlink {
     text-decoration: none;
     margin: 0 15px;
-    color: #f1cece;
+    color: #f8f8f8;
     font-weight: bold;
 }
 
 .authlink:hover {
-    color: rgb(214, 18, 18);
+    color: rgb(226, 178, 178);
 }
