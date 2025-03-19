@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/show.css" />
     <title>
         <%= myCD.album %>
     </title>
@@ -12,40 +12,45 @@
 
 <body>
     <%- include('../partials/_navbar.ejs') %>
+    <div class="show-body">
+        <div class="show-header">
+        <h1><%= myCD.artist %> - <%= myCD.album %></h1>
+      
 
-    <h1>
-        <%= myCD.artist %> - <%= myCD.album %>
-    </h1>
+        <% if (myCD.condition) { %>
+            <p id="condition">Condition: <%= myCD.condition %> </p>
+        <% } %>
+        
+        <p id="package">Packaging Style: <%= myCD.packageType %></p>
+        </div>
 
-    <p>Top Tracks</p>
+        <div class="album-art">
+            <% if (myCD.albumArtLink) { %>
+                <img src="<%= myCD.albumArtLink %>" />   
+            <% } %>
+            <div class="tracks">
+                <p id="track-heading">Top Tracks</p>
+                <p class="track"><%= myCD.trackListingA %></p>
+                <p class="track"><%= myCD.trackListingB %></p>
+                <p class="track"><%= myCD.trackListingC %></p>
+                <p class="track"><%= myCD.trackListingD %></p>
+            </div>   
+        </div>
 
-    <ul>
-        <li><%= myCD.trackListingA %></li>
-        <li><%= myCD.trackListingB %></li>
-        <li><%= myCD.trackListingC %></li>
-        <li><%= myCD.trackListingD %></li>
-    </ul>
+        <div class="show-actions">
+            <a href="/users/<%= user._id %>/musicCDs/<%= myCD._id %>/edit">
+                Edit this Entry
+            </a>
+        </div>
+        
+        <form
+        action="/users/<%= user._id %>/musicCDs/<%= myCD._id %>?_method=DELETE"
+        method="POST"
+        >
+        <button type="submit">Delete</button>
+        </form>
 
-    <% if (myCD.albumArtLink) { %>
-        <img src="<%= myCD.albumArtLink %>" />   
-    <% } %>
-
-    <% if (myCD.condition) { %>
-        <p>Condition: <%= myCD.condition %> </p>
-    <% } %>
-    
-    <p>Packaging Style: <%= myCD.packageType %></p>
-
-    <a href="/users/<%= user._id %>/musicCDs/<%= myCD._id %>/edit">
-        Edit this Entry
-    </a>
-
-    <form
-      action="/users/<%= user._id %>/musicCDs/<%= myCD._id %>?_method=DELETE"
-      method="POST"
-    >
-    <button type="submit">Remove From Catalog</button>
-    </form>
+    </div>   
 </body>
 
 </html>
