@@ -1,1 +1,1 @@
-![CD with Headphones with text CD Media Database](/assets/splash-screen.png)
+![CD with Headphones with text CD Media Database](home/code/ga/projects/my-project-2/assets/splash-screen.png)
