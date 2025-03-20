@@ -14,7 +14,7 @@ I came up with the idea to create this application based on my ever growing CD l
 
 The Technologies used in this project are __javascript__, __node.js__, __json__, __CSS__, and __Model-View-Controller (MVC) Framework__.
 
-In the future, I plan on adding the ability to add the full track listing of each entry.  Also, another update will include the Genre catagory. The ability to search by artist, album, track, and genre will also be added in the future.  Keep your eyes and ears open for further updates.
+***In the future***, I plan on adding the ability to add the full track listing of each entry.  Also, another update will include the Genre catagory. The ability to search by artist, album, track, and genre will also be added in the future.  Keep your eyes and ears open for further updates.
 
 The following is a link to my Trello board which shows the planning stages of my project.
 
