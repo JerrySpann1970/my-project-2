@@ -22,6 +22,6 @@ The following is a link to my Trello board which shows the planning stages of my
 
 The following is a link to the deployed application.  To create an account and try it click on the below link.
 
-[My URL](https://my-project-2-239d6ad4e34c.herokuapp.com/)
+[DEPLOYED Application](https://my-project-2-239d6ad4e34c.herokuapp.com/)
 
 
