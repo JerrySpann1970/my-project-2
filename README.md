@@ -1,4 +1,7 @@
+__Home Screen__
 ![CD with Headphones with text CD Media Database](./assets/splash-screen.png)
+__Show Page__
+![CD Cover and Favorite Track Listing](./assets/show-screen)
 # CD Media Database
 
 This app enables the user to create an account and log into their own personal __CD Media Database__.  Users can __create__, __add__, __delete__, and __edit__ their entries making this a ***Full Crud Application***.  This app allows users to enter the following properties of each of their audio CDs.
