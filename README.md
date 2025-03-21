@@ -19,6 +19,8 @@ The Technologies used in this project are __javascript__, __node.js__, __json__,
 
 ***In the future***, I plan on adding the ability to add the full track listing of each entry.  Also, another update will include the Genre catagory. The ability to search by artist, album, track, and genre will also be added in the future.  Keep your eyes and ears open for further updates.
 
+__Image by:__ WallpaperAccess
+
 __The following is a link to my ***Trello Board*** which shows the planning stages of my project.__
 
 [Trello Planning Board](https://trello.com/invite/b/67d4a00ad57c506cb094388c/ATTI0dd965a07242a0ae50ce0c7527cd7552546F7F90/project-2-trello)
