@@ -10,6 +10,11 @@ body {
     background-color: rgb(35, 35, 35);
 }
 
+footer {
+    margin: 15em  auto;
+    font-size: 20px;
+}
+
 .index-body {
     background-image: url('https://wallpapercave.com/wp/wp4346484.jpg');
     background-repeat: no-repeat;
